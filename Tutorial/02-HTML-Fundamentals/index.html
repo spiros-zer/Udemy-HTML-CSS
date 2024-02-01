@@ -1,0 +1,197 @@
+<!--Says to the browser this is an html file so as to use the html5 specification to render it. Must always be present-->
+<!DOCTYPE html>
+<!--Every html document needs to start with the html element. html element always contain a head and a body-->
+<html lang="en">
+  <!--Head element contains things that are not visible in the browser window-->
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Basic Language of the Web: HTML</title>
+  </head>
+  <!--The body contains all the elements that are visible on the page-->
+  <body>
+    <header>
+      <!--
+      The headings main purpose is to structurize big blocks of text into logical sections and give them a heading/title
+
+      h1 also known as primary heading. Good Practice to have only one of them in the html.
+      <h1>The Basic Language of the Web: HTML</h1>
+
+      <h2>The Basic Language of the Web: HTML</h2>
+
+      h3 also known as tertiary heading
+      <h3>The Basic Language of the Web: HTML</h3>
+
+      <h4>The Basic Language of the Web: HTML</h4>
+      <h5>The Basic Language of the Web: HTML</h5>
+      <h6>The Basic Language of the Web: HTML</h6>
+    -->
+      <h1>📘 The Code Magazine</h1>
+
+      <nav>
+        <!--
+      the <a> anchor element is not useful if it is not followed by an href.
+      
+      Adding a "#" in the href makes the link point to the top of the website (clicking just reloads the page from the top)
+    -->
+        <a href="blog.html">Blog</a>
+        <a href="#">Challenges</a>
+        <a href="#">Flexgrid</a>
+        <a href="#">CSS grid</a>
+        <a href="challenge.html">Challenge#2</a>
+      </nav>
+    </header>
+
+    <article>
+      <header>
+        <h2>The Basic Language of the Web: HTML</h2>
+
+        <img
+          src="img/laura-jones.jpg"
+          alt="Picture of author, Laura Jones"
+          width="50"
+          height="50"
+        />
+
+        <p>
+          <!--
+        Making bold text:
+        <b> element left from older HTML, doesn't have semantic meaning, bad practice
+
+        <strong> element in HTML5, has semantic meaning (this element must stand out from the page))
+      -->
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
+
+        <!--
+      <img> is a special element and does not have a closing bracket. Thats why we use attributes:
+
+      src: states the source of the img (the path to it)
+      alt: provides a description the img
+        accessibility 
+        the browser knows what this img is about (could be shown in google results cause of that)
+        if src link is broken, it will display the alt text next to it
+      width, height
+    -->
+        <img
+          src="img/post-img.jpg"
+          alt="HTML code on a screen"
+          width="500"
+          height="200"
+        />
+      </header>
+
+      <p>
+        <!--
+        Making italic text (emphasizing):
+        <i> and <em> element. Same as <b> and <strong>
+      -->
+        All modern websites and web applications are built using three
+        <em>fundamental</em>
+        technologies: HTML, CSS and JavaScript. These are the languages of the
+        web.
+      </p>
+
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
+
+      <h3>What is HTML?</h3>
+      <p>
+        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+        language that web developers use to structure and describe the content
+        of a webpage (not a programming language).
+      </p>
+
+      <p>
+        HTML consists of elements that describe different types of content:
+        paragraphs, links, headings, images, video, etc. Web browsers understand
+        HTML and render HTML code as websites.
+      </p>
+
+      <p>In HTML, each element is made up of 3 parts:</p>
+
+      <ol>
+        <li>The opening tag</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+
+      <p>
+        You can learn more at
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          >MDN Web Docks</a
+        >
+      </p>
+
+      <h3>Why should you learn HTML</h3>
+
+      <p>
+        There are countless reasons for learning the fundamental language of the
+        web. Here are 5 of them:
+      </p>
+
+      <ul>
+        <li>To be able to use the fundamental web dev language</li>
+        <li>
+          To hand-craft beautiful websites instead of relying on tools like
+          Worpress or Wix
+        </li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun 😃</li>
+      </ul>
+
+      <p>Hopefully you learned something new here. See you next time!</p>
+    </article>
+
+    <aside>
+      <h4>Related posts</h4>
+
+      <ul>
+        <li>
+          <img
+            src="img/related-1.jpg"
+            alt="A person programming on a laptop"
+            width="75"
+            height="75"
+          />
+          <a href="#">How to Learn Web Development</a>
+          <p>By Jonas Schmedtmann</p>
+        </li>
+
+        <li>
+          <img
+            src="img/related-2.jpg"
+            alt="Lightning falls in the night sky"
+            width="75"
+            height="75"
+          />
+          <a href="#">The Unknown Powers of CSS</a>
+          <p>By Jim Dillon</p>
+        </li>
+
+        <li>
+          <img
+            src="img/related-3.jpg"
+            alt="Computer screen showing JavaScript code"
+            width="75"
+            height="75"
+          />
+          <a href="#">Why JavaScript is Awesome</a>
+          <p>By Matilda</p>
+        </li>
+      </ul>
+    </aside>
+
+    <footer>
+      <!--The &copy is an HTML entity. There are tables full of these (like ascii characters) -->
+      Copyright &copy; 2027 by The Code Magazine.
+    </footer>
+  </body>
+</html>
+
+<!--HTML does not care about newlines-->
