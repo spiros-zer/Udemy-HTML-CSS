@@ -1,48 +1,74 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
   font-family: sans-serif;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  color: #1098ad;
 }
 
 h1 {
   font-size: 26px;
-  font-family: sans-serif;
   text-transform: uppercase;
   font-style: italic;
+  color: #1098ad;
 }
 
 h2 {
   font-size: 40px;
-  font-family: sans-serif;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
-  font-family: sans-serif;
+  margin-top: ;
 }
 
 h4 {
   font-size: 20px;
   font-family: sans-serif;
-  text-transform: uppercase;
   text-align: center;
 }
 
 p {
   font-size: 22px;
-  font-family: sans-serif;
   line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+ul, ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 /* we only style the list item and not the list itself */
 li {
   font-size: 20px;
-  font-family: sans-serif;
+  margin-bottom: 10px;
 }
 
+li:last-child {
+  margin-bottom: 0px;
+}
 /* descendant selector */
 /* footer p {
   font-size: 16px;
@@ -67,8 +93,69 @@ li {
   font-weight: bold;
 }
 
+.related {
+  list-style: none;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0px;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* Pseudo class */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* li:nth-child(odd) {
+  color: red;
+} */
+
+/* 
+  Misconception
+  The bellow example does not work because it will search for:
+  the first-child of article and this child has to be a <p> element
+  article p:first-child {
+    color: red;
+  }
+*/
+
+/* When styling <a> we dont use an element picker but instead pseudoclasses because then we will be able to target different states of the link */
+a:link { /* <a> with links */
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited { /* <a> I have already pressed */
+  color: #1098ad;
+}
+
+a:hover { /* <a> I hover my mouse over */
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active { /* <a> that i am clicking */
+  background-color: black;
+  font-style: italic;
+}
+
 /* Descendant selectors can generally get out of hand and reflect the code structure of the HTML. This will lead in unmaintanable code and it is a bad practice.
 
 When things get more complicated it is better to give HTML elements a name and select them based on their given name. */
 
-/* In selectors for classes we use . and for ids we use # */
+/* In selectors for .class we use . and for #id we use # */
+/* For the #id option I cannot have multiple #id with the same name. I instead use .class */
+/* In .classes if we have multiple words we use - to separate them due to CSS convention */
+/* In real world applications we use .classes for future proofing the code 
