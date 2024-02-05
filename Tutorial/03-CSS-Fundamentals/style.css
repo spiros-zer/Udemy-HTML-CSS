@@ -3,15 +3,25 @@
   padding: 0;
 }
 
+
 body {
   color: #444;
   font-family: sans-serif;
+
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
 }
 
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
+  /* height: 80px;
+  avoid generally giving a fixed height/width */
 }
 
 article {
@@ -22,7 +32,17 @@ article {
   margin-bottom: 40px;
 }
 
-h1, h2, h3 {
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0px;
+  width: 500px;
+}
+
+h1,
+h2,
+h3 {
   color: #1098ad;
 }
 
@@ -36,6 +56,8 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+
+  position: relative;
 }
 
 h3 {
@@ -55,7 +77,8 @@ p {
   margin-bottom: 50px;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 50px;
   margin-bottom: 20px;
 }
@@ -69,6 +92,7 @@ li {
 li:last-child {
   margin-bottom: 0px;
 }
+
 /* descendant selector */
 /* footer p {
   font-size: 16px;
@@ -95,13 +119,6 @@ li:last-child {
 
 .related {
   list-style: none;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
-  padding: 50px 0px;
 }
 
 /* .first-li {
@@ -131,24 +148,90 @@ li:last-child {
 */
 
 /* When styling <a> we dont use an element picker but instead pseudoclasses because then we will be able to target different states of the link */
-a:link { /* <a> with links */
+a:link {
+  /* <a> with links */
   color: #1098ad;
   text-decoration: none;
 }
 
-a:visited { /* <a> I have already pressed */
+a:visited {
+  /* <a> I have already pressed */
   color: #1098ad;
 }
 
-a:hover { /* <a> I hover my mouse over */
+a:hover {
+  /* <a> I hover my mouse over */
   color: orangered;
   font-weight: bold;
   text-decoration: underline orangered;
 }
 
-a:active { /* <a> that i am clicking */
+a:active {
+  /* <a> that i am clicking */
   background-color: black;
   font-style: italic;
+}
+
+.post-img {
+  /* width: 800px; */
+  width: 100%;
+  /* The percent is in reference to the parent container */
+  height: auto;
+  /* if we haven't previously specified the height/width of the img then auto is not necessary */
+}
+
+nav a:link {
+  margin-right: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+
+  cursor: pointer;
+
+  padding: 20px;
+
+  /* 
+    The absolute position needs to be IN RELATION with some other parent element. BY DEFAULT it will be in relation with the viewport => the visible part of the screen.
+    
+    e.g. if we set bottom: 50px; without any position: relative parent, the button will be placed at the the bottom of the visible part of the screen (viewport bottom).
+    
+    The position:relative does not need to be to an immediate parent. Just any parent is enough
+  */
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+
+/* PSEUDO ELEMENTS */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* Adjacent element selector */
+/* h3+p::first-line {} */
+
+h2::after {
+  content: "TOP";
+
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+
+  display: inline-block;
+  padding: 5px 10px;
+
+  position: absolute;
+  top: -15px;
+  right: -25px;
 }
 
 /* Descendant selectors can generally get out of hand and reflect the code structure of the HTML. This will lead in unmaintanable code and it is a bad practice.
