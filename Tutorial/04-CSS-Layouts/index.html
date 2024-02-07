@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
 
-<head>
-  <meta charset="UTF-8">
-  <link href="style.css" rel="stylesheet">
+    <title>The Basic Language of the Web: HTML</title>
+  </head>
 
-  <title>The Basic Language of the Web: HTML</title>
+  <body>
+    <div class="container">
+      <header class="main-header clearfix">
+        <h1>📘 The Code Magazine</h1>
 
-</head>
+        <nav>
+          <a href="blog.html">Blog</a>
+          <a href="challenge.html">Challenges</a>
+          <a href="flexbox.html">Flexbox</a>
+          <a href="css-grid.html">CSS grid</a>
+        </nav>
+      </header>
 
-<body>
-
-  <div class="container">
-
-    <header class="main-header clearfix">
-
-      <h1>📘 The Code Magazine</h1>
-
-      <nav>
-        <a href="blog.html">Blog</a>
-        <a href="challenge.html">Challenges</a>
-        <a href="flexbox.html">Flexbox</a>
-        <a href="css-grid.html">CSS grid</a>
-      </nav>
-
-    </header>
-
-    <div class="row">
+      <!-- ONLY NECCESSARY FOR FLEXBOX -->
+      <!-- <div class="row"> -->
       <article>
-
         <header class="post-header">
           <h2>The Basic Language of the Web: HTML</h2>
 
           <div class="author-box">
-            <img src="img/laura-jones.jpg" alt="Picture of author, Laura Jones" width="50" height="50"
-              class="author-img">
+            <img
+              src="img/laura-jones.jpg"
+              alt="Picture of author, Laura Jones"
+              width="50"
+              height="50"
+              class="author-img"
+            />
             <p class="author">
               Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
             </p>
           </div>
 
-          <img src="img/post-img.jpg" alt="HTML code on a computer screen" width="500" height="200" class="post-img">
+          <img
+            src="img/post-img.jpg"
+            alt="HTML code on a computer screen"
+            width="500"
+            height="200"
+            class="post-img"
+          />
           <button>❤ Like</button>
         </header>
 
         <p>
           All modern websites and web applications are built using three
-          <em>fundamental</em> technologies: HTML, CSS and JavaScript. These are the languages of the
-          web.
+          <em>fundamental</em> technologies: HTML, CSS and JavaScript. These are
+          the languages of the web.
         </p>
 
         <p>
-          In this post, let's focus on HTML. We will learn what HTML is all about,
-          and why you too should learn it.
+          In this post, let's focus on HTML. We will learn what HTML is all
+          about, and why you too should learn it.
         </p>
 
         <h3>What is HTML?</h3>
@@ -65,8 +70,8 @@
 
         <p>
           HTML consists of elements that describe different types of content:
-          paragraphs, links, headings, images, video, etc. Web browsers understand
-          HTML and render HTML code as websites.
+          paragraphs, links, headings, images, video, etc. Web browsers
+          understand HTML and render HTML code as websites.
         </p>
 
         <p>In HTML, each element is made up of 3 parts:</p>
@@ -79,14 +84,18 @@
 
         <p>
           You can learn more at
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docks</a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            target="_blank"
+            >MDN Web Docks</a
+          >
         </p>
 
         <h3>Why should you learn HTML</h3>
 
         <p>
-          There are countless reasons for learning the fundamental language of the
-          web. Here are 5 of them:
+          There are countless reasons for learning the fundamental language of
+          the web. Here are 5 of them:
         </p>
 
         <ul>
@@ -108,7 +117,12 @@
 
         <ul class="related">
           <li class="related-post">
-            <img src="img/related-1.jpg" alt="A person programming on a laptop" width="75" height="75">
+            <img
+              src="img/related-1.jpg"
+              alt="A person programming on a laptop"
+              width="75"
+              height="75"
+            />
             <div>
               <a href="#" class="related-link">How to Learn Web Development</a>
               <p class="related-author">By Jonas Schmedtmann</p>
@@ -116,7 +130,12 @@
           </li>
 
           <li class="related-post">
-            <img src="img/related-2.jpg" alt="Lightning falls in the night sky" width="75" height="75">
+            <img
+              src="img/related-2.jpg"
+              alt="Lightning falls in the night sky"
+              width="75"
+              height="75"
+            />
             <div>
               <a href="#" class="related-link">The Unknown Powers of CSS</a>
               <p class="related-author">By Jim Dillon</p>
@@ -124,7 +143,12 @@
           </li>
 
           <li class="related-post">
-            <img src="img/related-3.jpg" alt="Computer screen showing JavaScript code" width="75" height="75">
+            <img
+              src="img/related-3.jpg"
+              alt="Computer screen showing JavaScript code"
+              width="75"
+              height="75"
+            />
             <div>
               <a href="#" class="related-link">Why JavaScript is Awesome</a>
               <p class="related-author">By Matilda</p>
@@ -132,15 +156,13 @@
           </li>
         </ul>
       </aside>
+      <!-- </div> -->
+      <footer>
+        <!--The &copy is an HTML entity. There are tables full of these (like ascii characters) -->
+        <p id="Copyright">Copyright &copy; 2027 by The Code Magazine.</p>
+      </footer>
     </div>
-    <footer>
-      <!--The &copy is an HTML entity. There are tables full of these (like ascii characters) -->
-      <p id="Copyright">Copyright &copy; 2027 by The Code Magazine.</p>
-    </footer>
-  </div>
-
-</body>
-
+  </body>
 </html>
 
 <!--HTML does not care about newlines-->
