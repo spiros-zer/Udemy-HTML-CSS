@@ -6,6 +6,11 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
+/* 
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +21,11 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  font-family: sans-serif;
+  /*In the font family if we add 2 (or more) fonts then this describes the priority of the fonts. 
+  e.g. Since Inter is first, CSS will use this for the fonts. BUT if for some reason the first option is unavailable (no internet) then the second one will be used (and so on)*/
+  font-family: 'Inter', sans-serif;
+  color: #343a40;
+  border-bottom: 8px solid #087f5b;
 }
 
 .container {
@@ -31,12 +40,39 @@ section {
 
 h2 {
   margin-bottom: 48px;
+  font-size: 36px;
+  letter-spacing: -0.5px;
 }
 
 .grid-3-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 80px;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #087f5b;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #099268;
+}
+
+.btn--big {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.btn--small {
+  padding: 8px 12px;
+  font-size: 14px;
 }
 
 /* ------------------------ */
@@ -57,10 +93,14 @@ header {
 
 h1 {
   margin-bottom: 24px;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .header-text {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
 
 img {
@@ -68,16 +108,29 @@ img {
 }
 
 /* FEATURES */
-.features-icon {}
-
-.features-title {
+.features-icon {
+  stroke: #087f5b;
+  width: 32px;
+  height: 32px;
   margin-bottom: 16px;
 }
 
-.features-text {}
+.features-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.features-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
 
 /* TESTIMONIAL */
-.testimonial-section {}
+.testimonial-section {
+  background-color: #087f5b;
+  color: #fff;
+  padding: 24px;
+}
 
 .testimonial-box {
   grid-column: 2 / -1;
@@ -86,10 +139,13 @@ img {
 
 .testimonial-box h2 {
   margin-bottom: 24px;
+  font-size: 24px;
 }
 
 .testimonial-text {
   font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
   margin-bottom: 24px;
 }
 
@@ -118,13 +174,20 @@ h3 {
   margin-bottom: 0;
 }
 
-.chair-icon {}
+.chair-icon {
+  stroke: #087f5b;
+  width: 24px;
+  height: 24px;
+}
 
 .chair-price {
   display: flex;
   justify-content: space-between;
+  font-size: 20px;
 }
 
 footer {
+  color: #495057;
+  font-size: 14px;
   margin-bottom: 48px;
 }
