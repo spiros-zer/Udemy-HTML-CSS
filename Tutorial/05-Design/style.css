@@ -35,7 +35,7 @@ body {
 
 header,
 section {
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 }
 
 h2 {
@@ -58,6 +58,8 @@ h2 {
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
+  /*If I want to make a SQUARE element round then I use a border-radius of 50%. BUT on rectangular elements this will not work. In the case of rectangular elements a border-radius > than the element height is enough, so giving a very big value works as well without finding that exact value. */
+  border-radius: 100px;
 }
 
 .btn:hover,
@@ -75,6 +77,10 @@ h2 {
   font-size: 14px;
 }
 
+img {
+  border-radius: 12px;
+}
+
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
@@ -84,7 +90,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 .header-text-box {
@@ -92,7 +98,7 @@ header {
 }
 
 h1 {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   font-size: 44px;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -112,7 +118,7 @@ img {
   stroke: #087f5b;
   width: 32px;
   height: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .features-title {
@@ -130,6 +136,8 @@ img {
   background-color: #087f5b;
   color: #fff;
   padding: 24px;
+  /*Since we have already a picture with border-radius we must set it to the same border radius for a more natural look*/
+  border-radius: 12px;
 }
 
 .testimonial-box {
@@ -143,15 +151,40 @@ img {
 }
 
 .testimonial-text {
+  color: #e6fcf5;
   font-style: italic;
   font-size: 18px;
   line-height: 1.7;
   margin-bottom: 24px;
 }
 
+.testimonial-author {
+  color: #c3fae8;
+}
+
 /* CHAIRS */
+.chair {
+  border-radius: 12px;
+  box-shadow:
+    /*Horizontal offset between box and shadow. Basically in web desing we want the light to be from the top. Thus very small values in this field.*/
+    0
+    /*Offset of shadow from box*/
+    20px
+    /*Blur of shadow*/
+    30px
+    /*Scale shadow up if not set it will be 0*/
+    0
+    /*Color of shadow*/
+    rgba(0, 0, 0, 0.07);
+}
+
+.chair img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .chair-box {
-  padding: 24px;
+  padding: 32px;
 }
 
 h3 {
@@ -160,14 +193,14 @@ h3 {
 
 .chair-details {
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .chair-details li {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .chair-details li:last-child {
@@ -183,6 +216,7 @@ h3 {
 .chair-price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 20px;
 }
 
