@@ -1,0 +1,62 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font Sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font Weights
+
+- Line Heights
+Default: 1
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints:
+- Shades:
+- Accents:
+- Greys: #555
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+- Spacing System (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+Root element Font size:
+Basically what we did here is we wanted to change the  the root element's font size to 10px in order to make the rem-to-pixel calculation easier. But if we set a hardcoded value like 10px then accessibility issues wiull occur (e.g. some user has increased browser font-size but our css will overwrite it). Thus, by using a percentage, the root element's font size will be a percentage of the size set by the user in their browser. The percentage is calculated as shown bellow.
+*/
+html {
+  /*Percentage -> 10px / 16px = 0.625 = 62.5%*/
+  /*Percentage of user's browser font-size setting*/
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/*
+max-width:
+logic is that if the viewport is bigger than the max-width of the element then the element will have the width specified by max-width. But if the viewport widht is less than the max-width specified then the elemnt will have 100% of the width of the viewport => thus no scroll bars will be displayed.
+
+rem:
+it is the root element's font size. The root of the document is the html element and its default font size is 16px. So 1 rem = 16px IF THE HTML FONT SIZE REMAINS THE DEFAULT.
+*/
