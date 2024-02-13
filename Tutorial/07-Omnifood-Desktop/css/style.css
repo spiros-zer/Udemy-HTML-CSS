@@ -53,6 +53,17 @@ body {
   color: #555;
 }
 
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.hero-img {
+  width: 100%
+}
+
 /*
 max-width:
 logic is that if the viewport is bigger than the max-width of the element then the element will have the width specified by max-width. But if the viewport widht is less than the max-width specified then the elemnt will have 100% of the width of the viewport => thus no scroll bars will be displayed.
