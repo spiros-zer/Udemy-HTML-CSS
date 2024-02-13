@@ -24,7 +24,6 @@
       }
 
       nav,
-      menu,
       section,
       main,
       aside {
@@ -38,13 +37,50 @@
       }
 
       menu {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         background-color: #7048e8;
         color: #fff;
         grid-column: 2 / -1;
+        padding: 0 40px;
+      }
+
+      button {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #5f3dc4;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 12px;
+      }
+
+      button:last-child {
+        /*Setting the margin to auto makes it to take up all the remaining space in the container.*/
+        margin-left: auto;
+        background-color: #d6336c;
       }
 
       section {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
         background-color: #e9ecef;
+        padding: 40px;
+        /*How elements that don't fit into element appear.*/
+        overflow: scroll;
+      }
+
+      .email {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*Turning shrink off because flexbox wi ll make the elements shrink to cover only the available space and thus we will not see the overflow element at work from the section element.*/
+        flex-shrink: 0;
+        background-color: #adb5bd;
+        height: 96px;
       }
 
       aside {
@@ -55,8 +91,25 @@
   <body>
     <nav>Nav</nav>
     <!-- menu element is for menu buttons in a web app -->
-    <menu>Menu</menu>
-    <section>Inbox</section>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark Unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
     <main>Email view</main>
     <aside>Additional info</aside>
   </body>
