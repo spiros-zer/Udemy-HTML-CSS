@@ -67,6 +67,28 @@ body {
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
 
+/*At this point we want to create a reusable grid instead of writing grid again and again. We also want this grid to be customisable depending on the scenario, that's why we introduce the gird--x-cols if we want different amount of columns in which we set the columns and  not the .grid class*/
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*We again want to have a generic element to center our elements in page, and as with the generic grid above, we follow the same practice here*/
+.container {
+  /*1200px is a standard used in most cases. Also 1140px is another standard widely used*/
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -189,6 +211,7 @@ body {
 }
 
 .hero {
+  /*We dont use the reusable grid here because it is different in width size*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9.6em;
@@ -203,8 +226,6 @@ body {
   line-height: 1.6;
   margin-bottom: 4.8rem;
 }
-
-
 
 .hero-img {
   width: 100%
@@ -244,6 +265,15 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/**********************/
+/* HOT IT WORKS SECTION */
+/**********************/
+
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
 
 /*
