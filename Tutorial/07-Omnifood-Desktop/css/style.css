@@ -214,6 +214,37 @@
   width: 35%;
 }
 
+/**********************/
+/* MEALS SECTION */
+/**********************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal-title {
+  font-size: 2rem;
+  columns: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+}
+
+
+.meal-img {
+  width: 100%;
+}
+
 /*
 max-width:
 logic is that if the viewport is bigger than the max-width of the element then the element will have the width specified by max-width. But if the viewport widht is less than the max-width specified then the elemnt will have 100% of the width of the viewport => thus no scroll bars will be displayed.
