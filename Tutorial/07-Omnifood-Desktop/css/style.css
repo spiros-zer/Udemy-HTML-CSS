@@ -14,7 +14,7 @@ Default: 1
 
 - Primary: #e67e22
 - Tints: #fdf2e9
-- Shades:
+- Shades: #cf711f
 - Accents:
 - Greys: #555 #333
 
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -88,6 +88,7 @@ body {
   display: inline-block;
   background-color: #e67e22;
   font-size: 2rem;
+  font-weight: 600;
   padding: 1.6rem 3.2rem;
   text-decoration: none;
   border-radius: 9px;
@@ -129,6 +130,42 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  /*Bug in Safari browser when imgs are flex and width is not defined. That's why we explicitly define width here.*/
+  width: 4.8rem;
+  border-radius: 50%;
+  /*In Flexbox you cannot specify a negative gap to make elements overlap and thus we have to use margin*/
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  /*Because we used the negative margin-right the flexbox was shorter and thus even though there was a gap between elements we had to reset the margin of the last img for it to behave properly*/
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
 
 /*
