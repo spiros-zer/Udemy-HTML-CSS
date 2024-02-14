@@ -1,0 +1,182 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font Sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font Weights
+
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line Heights
+
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph Default: 1.6
+
+- Letter Spacing
+
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints: #fdf2e9 #fae5d3
+- Shades: #cf711f
+- Accents:
+- Greys: #555 #333
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+
+--- 07 WHITESPACE
+
+- Spacing System (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+Root element Font size:
+Basically what we did here is we wanted to change the  the root element's font size to 10px in order to make the rem-to-pixel calculation easier. But if we set a hardcoded value like 10px then accessibility issues wiull occur (e.g. some user has increased browser font-size but our css will overwrite it). Thus, by using a percentage, the root element's font size will be a percentage of the size set by the user in their browser. The percentage is calculated as shown bellow.
+*/
+html {
+  /*Percentage -> 10px / 16px = 0.625 = 62.5%*/
+  /*Percentage of user's browser font-size setting*/
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/*******************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*******************************/
+
+/*At this point we want to create a reusable grid instead of writing grid again and again. We also want this grid to be customisable depending on the scenario, that's why we introduce the gird--x-cols if we want different amount of columns in which we set the columns and  not the .grid class*/
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+/*We again want to have a generic element to center our elements in page, and as with the generic grid above, we follow the same practice here*/
+.container {
+  /*1200px is a standard used in most cases. Also 1140px is another standard widely used*/
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  /*Using px for very small distances*/
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  border-radius: 9px;
+
+  /*Animating color change of button from link to hevered*/
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /*If we use border since the border is added on the outside of the button, the button seems to jump. That's why we dont't use the border/*/
+  /* border: 3px solid #fff; */
+  /*Trick to add boprder inside*/
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
