@@ -81,12 +81,26 @@ body {
   column-gap: 6.4rem;
 }
 
+/*
+We want a margin bottom to the grid for some visual hierarchy, BUT not when it is the last element in a container. There are 2 ways we can go about this:
+1) add margin-bottom to the .grid and then make .grid:last-child where the margin is 0 if the the last child is grid
+2) make .grid:not(:last-child) and add the margin-bottom in there which will basically apply the the margin to all grids that are NOT the last chilg of a container
+*/
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6;
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid--center-v {
