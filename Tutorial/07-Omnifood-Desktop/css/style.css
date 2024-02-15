@@ -325,6 +325,39 @@
   color: #e67e22;
 }
 
+/**********************/
+/* MEALS SECTION */
+/**********************/
+
+.section-testimonials {
+  padding: 9.6rem 0;
+}
+
+.testimonials {
+  /*We could have used the general grid and add another subclass but since we will be only using this subclass for the testimonials we might as well just create a class for it*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+.testimonial-img {
+  /*We don't want it flexible we won't it a set width (doesn't have a reason, Jonas' design experience*/
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #777;
+}
+
 /*
 max-width:
 logic is that if the viewport is bigger than the max-width of the element then the element will have the width specified by max-width. But if the viewport widht is less than the max-width specified then the elemnt will have 100% of the width of the viewport => thus no scroll bars will be displayed.
