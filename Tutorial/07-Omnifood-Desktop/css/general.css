@@ -28,7 +28,7 @@ Paragraph Default: 1.6
 
 - Primary: #e67e22 #51cf66
 - Tints: #fdf2e9 #fae5d3 #eb984e
-- Shades: #cf711f
+- Shades: #cf711f #45260a
 - Accents:
 - Greys: #555 #333 #6f6f6f (lightest grey allowd on #fdf2e9)
 
@@ -154,6 +154,14 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
   margin-bottom: 3.2rem;
 }
 
+/*The way the button subclasses work is:
+btn:link will be applied to buttons with href in them
+btn:visited will be applied to button links that have been visited
+btn:hover will be applied when cursr hovers over the btn element
+btn:active will be applied when the btn is pressed
+
+In case we have a btn with no href, the first 2 will not be applied thus the button will be not styled -> we add the plain btn class to the style*/
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -163,9 +171,11 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
   padding: 1.6rem 3.2rem;
   text-decoration: none;
   border-radius: 9px;
-
   /*Animating color change of button from link to hevered*/
   transition: all 0.3s;
+  /*These are ONLY necessary for the .btn class and not the .btn:link, visited*/
+  border: none;
+  cursor: pointer;
 }
 
 .btn--full:link,
@@ -192,6 +202,19 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
   /* border: 3px solid #fff; */
   /*Trick to add boprder inside*/
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+
 }
 
 .link:link,
@@ -229,6 +252,13 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+
+/*Focus dictates which elemnt is selected currently. Focus is a state of different elements such as links, buttons*/
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /*******************************/
