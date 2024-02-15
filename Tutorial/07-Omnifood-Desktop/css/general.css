@@ -88,7 +88,7 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
 */
 
 .grid:not(:last-child) {
-  margin-bottom: 9.6;
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -232,6 +232,8 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
 /*******************************/
 /* HELPER/SETTINGS CLASSES */
 /*******************************/
+
+/*These can be seen as overwritting the general settings we have set earlier for some special scenarions*/
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
