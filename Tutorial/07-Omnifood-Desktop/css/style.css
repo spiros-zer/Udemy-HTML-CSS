@@ -551,6 +551,14 @@
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
+/*******************************/
+/* FOOTER SECTION */
+/*******************************/
+
+.footer {
+  padding: 9.6rem 0;
+}
+
 /*
 max-width:
 logic is that if the viewport is bigger than the max-width of the element then the element will have the width specified by max-width. But if the viewport widht is less than the max-width specified then the elemnt will have 100% of the width of the viewport => thus no scroll bars will be displayed.

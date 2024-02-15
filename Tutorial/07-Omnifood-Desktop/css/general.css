@@ -105,6 +105,10 @@ We want a margin bottom to the grid for some visual hierarchy, BUT not when it i
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
   align-items: center;
 }
