@@ -65,6 +65,8 @@ html {
   font-size: 62.5%;
   /*We add overflow-x in both html and body element*/
   overflow-x: hidden;
+  /*In Google Chrome on windows, linux and android systems, we can use the smooth scrolling, BUT in iOS it is not working and thus we need to do it through JS*/
+  scroll-behavior: smooth;
 }
 
 body {
