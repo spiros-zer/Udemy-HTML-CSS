@@ -96,8 +96,13 @@
             </div>
           </div>
           <div class="hero-img-box">
+            <!-- In case of browser not understanding webp we can provide 2 images and let browser decide -->
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.png" type="image/png" />
+            </picture>
             <img
-              src="img/hero.png"
+              src="img/hero.webp"
               class="hero-img"
               alt="Woman enjoying food, meals in storage container, food bowls on a table"
             />
