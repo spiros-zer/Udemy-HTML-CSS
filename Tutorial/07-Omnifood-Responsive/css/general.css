@@ -18,6 +18,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph Default: 1.6
+Large: 1.8
 
 - Letter Spacing
 
@@ -250,6 +251,7 @@ In case we have a btn with no href, the first 2 will not be applied thus the but
   align-items: center;
   gap: 1.6rem;
   font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 .list-icons {
