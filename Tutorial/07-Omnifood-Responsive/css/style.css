@@ -3,6 +3,8 @@
 /**********************/
 
 .header {
+  /*We added position relative when we entered the media queries, Building Mobile Navigation. That is because we wanted to overflow-x: hidden but main-nav class was set to absolute and attached to body and thus overflow-x was not working. Thus, we change the position of main-nav element's immediate parent to relative and it works. */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,6 +56,25 @@
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
+}
+
+/*** MOBILE */
+.btn-mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/*Selection based on attributes*/
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /**********************/

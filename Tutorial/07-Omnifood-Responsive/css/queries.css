@@ -127,6 +127,61 @@ Also, the root square element's size can not be changed and thus 1rem = 1em = 16
     margin-top: 1.2rem;
   }
 
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*Animations have been optimized by CSS to be paired with transform. So instead of animating left or anything like this */
+    transform: translateX(100%);
+
+    /*The third parameter changes the animation curve*/
+    transition: all 0.5s ease-in;
+    /*Hide navigation*/
+    /*Setting display: none will disable all transitions. */
+    /*To hide the navigation properly we follow these steps*/
+    /* 1) Hide it visually */
+    opacity: 0;
+    /* 2) Make it unacessible to mouse and keyboard (could reach it pressing Tab button) */
+    pointer-events: none;
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  /*To animate the pressing of the button without JS again we use a helper class here .nav-open*/
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link.nav-cta:link,
+  .main-nav-link.nav-cta:visited {
+    font-size: 3rem;
+  }
 }
 
 /*
