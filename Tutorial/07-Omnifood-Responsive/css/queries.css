@@ -21,8 +21,49 @@ Also, the root square element's size can not be changed and thus 1rem = 1em = 16
   }
 }
 
-/*
+/**********************/
+/* BELOW 1200px (landscape tablets) */
+/**********************/
 
+/* 1200px are a common breakpoint since we are now stepping into handheld devices teritory */
+@media (max-width: 75em) {
+  html {
+    /*I want to make it 9px so 9/16 = 0.5625*/
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  /*For ease of setting up our layout we still use the convention that 10px = 1rem. Just for faaster set up and the visual result will be still the same*/
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/*
 --- 01 TYPOGRAPHY SYSTEM
 
 - Font Sizes (px):
@@ -32,5 +73,4 @@ Also, the root square element's size can not be changed and thus 1rem = 1em = 16
 
 - Spacing System (px):
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
 */
