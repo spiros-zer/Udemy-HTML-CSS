@@ -130,6 +130,7 @@ Also, the root square element's size can not be changed and thus 1rem = 1em = 16
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
@@ -141,6 +142,7 @@ Also, the root square element's size can not be changed and thus 1rem = 1em = 16
     left: 0;
     width: 100%;
     height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
     /*Animations have been optimized by CSS to be paired with transform. So instead of animating left or anything like this */
     transform: translateX(100%);
 
@@ -296,8 +298,9 @@ Also, the root square element's size can not be changed and thus 1rem = 1em = 16
     height: 32rem;
     grid-row: 1;
   }
+}
 
-  /*
+/*
 --- 01 TYPOGRAPHY SYSTEM
 
 - Font Sizes (px):
